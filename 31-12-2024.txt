@@ -1,0 +1,135 @@
+ORM query for Updating a record:
+=====================
+>>> B2=Users.objects.filter(First_Name="Rahul").update(Last_Name="Sharma_One")
+>>> B2
+1
+>>> B3=Users.objects.get(First_Name="Rahul")
+>>> B3
+<Users: Rahul Sharma_One rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>
+>>>
+
+
+ORM query to deleting a single record:
+========================
+>>> B4=Users.objects.get(First_Name="Rahul").delete()
+>>> B4
+(1, {'application1.Users': 1})
+>>> B5=Users.objects.all()
+>>> B5
+<QuerySet [<Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>]>
+>>>
+
+
+Applying limiting queries:
+================
+While ORM queries in Django limiting queries is nothing but applying slicing methodlogy.
+
+
+>>> B6=Users.objects.all()[0:]
+>>> B6
+<QuerySet [<Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>]>
+>>> B7=Users.objects.all()[2:5]
+>>> B7
+<QuerySet [<Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>]>
+>>> B8=Users.objects.all()[2:5:2]
+>>> B8
+[<Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>]
+>>> B9=Users.objects.all()[::-1]
+>>> B9
+[<Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>]
+>>> B10=Users.objects.all()[-1:-5:-1]
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\query.py", line 269, in __getitem__
+    "Negative indexing is not supported."
+AssertionError: Negative indexing is not supported.
+>>>
+
+
+working on order_by clause with ORM queries:
+=============================
+order_clause is used to represent the records from ascending order to decending
+order as per the application reqn.
+
+>>> B11=Users.objects.all().order_by("Mobile_Number")
+>>> B11
+<QuerySet [<Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>, <Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>]>
+>>> B11=Users.objects.all().order_by("-Mobile_Number")
+>>> B11
+<QuerySet [<Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>, <Users: Nitin Kumar nitin_12345 nitin_12345 nitin_12345 7676123123 nitin@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>]>
+>>>
+
+
+Working with aggregate functions --->avg(),sum(),count(),max(),min()
+===========================================
+>>> from django.db.models import Avg,Sum,Max,Min,Count
+>>> C1=Users.objects.all().aggregate(Avg("Mobile_Number")
+...
+... )
+>>> C1
+{'Mobile_Number__avg': 6073447698.6}
+>>> C2=Users.objects.all().aggregate(Sum("Mobile_Number"))
+>>> C2
+{'Mobile_Number__sum': 30367238493}
+>>> C3=Users.objects.all().aggregate(Max("Mobile_Number"))
+>>> C3
+{'Mobile_Number__max': '8080123123'}
+>>> C4=Users.objects.all().aggregate(Min("Mobile_Number"))
+>>> C4
+{'Mobile_Number__min': '1234567890'}
+>>> C5=Users.objects.all().aggregate(Count("Mobile_Number"))
+>>> C5
+{'Mobile_Number__count': 5}
+>>>
+
+
+ORM query for deleting
+===============
+>>> C6=Users.objects.all().delete()
+>>> C6
+(5, {'application1.Users': 5})
+>>> C7=Users.objects.all()
+>>> C7
+<QuerySet []>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

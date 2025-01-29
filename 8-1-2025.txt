@@ -1,0 +1,162 @@
+Ex1:
+===
+import time 
+from flask import Flask 
+app=Flask(__name__)
+@app.route("/")
+def Test_Case1():
+    return "Weclome to Flask for Web Development"
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Ex2:
+===
+import time 
+from flask import Flask 
+app=Flask(__name__)
+@app.route("/")
+def Test_Case1():
+    return "<h1><tt>Weclome to Flask for Web Development</tt></h1>"
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Ex3:
+===
+import time 
+from flask import Flask 
+app=Flask(__name__)
+@app.route("/home")
+def Test_Case1():
+    return "<h1><tt>Home Page under development</tt></h1>"
+@app.route("/about")
+def Test_Case2():
+    return "<h1><tt>About Page under development</tt></h1>"
+@app.route("/services")
+def Test_Case3():
+    return "<h1><tt>Servicr Page under development</tt></h1>"
+@app.route("/contact")
+def Test_Case4():
+    return "<h1><tt>Contact Page under development</tt></h1>"
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+->How to implement Complete FrontEnd Development in Flask:
+=========================================
+
+Flask_Project_Development
+                  templates
+                        ->HTML & HTML5 files
+                  static
+                        Images
+                        CSS
+                        JavaScript
+
+
+Flask_Development---->main.py:
+=====================
+import time 
+from flask import Flask,render_template 
+app=Flask(__name__)
+@app.route("/home")
+def Test_Case1():
+    return render_template("home.html")
+@app.route("/about")
+def Test_Case2():
+    return render_template("about.html")
+@app.route("/service")
+def Test_Case3():
+    return render_template("service.html")
+@app.route("/contact")
+def Test_Case4():
+    return render_template("contact.html")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Flask_Development --->templates--->home.html:
+================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Page</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Home_Page</legend>
+        <center>
+            <h1><tt>Home_Page under development</tt></h1>
+        </center>
+    </fieldset>
+    
+</body>
+</html>
+
+Flask_Development---->templates---->about.html:
+==================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_Page</title>
+</head>
+<body>
+    <fieldset>
+        <legend>About_Page</legend>
+        <center>
+            <h1><tt>About_Page under development</tt></h1>
+        </center>
+    </fieldset>
+    
+</body>
+</html>
+
+
+Flask_Development --->templates---->service.html:
+=================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About_Page</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Service_Page</legend>
+        <center>
+            <h1><tt>Service_Page under development</tt></h1>
+        </center>
+    </fieldset>
+    
+</body>
+</html>
+
+
+Flask_Development ---->templates---->contact.html:
+===================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact_Page</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Contact_Page</legend>
+        <center>
+            <h1><tt>Contact_Page under development</tt></h1>
+        </center>
+    </fieldset>
+    
+</body>
+</html>
+
+Working on Static folder:
+=================

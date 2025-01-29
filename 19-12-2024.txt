@@ -1,0 +1,23 @@
+Working on models in Django:
+==================
+Model is a class in django.The main objective of models is to create the one or more than
+one database table as our django web application.
+
+
+Note:
+====
+Bydefault Django uses SQLLITE3 to store the application data/information.
+
+
+Python manage.py makemigrations:
+======================
+This command is used to convert a class into a SQL_format.
+
+
+Python manage.py migrate:
+=================
+This command is used to perform database operations
+
+
+
+

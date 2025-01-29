@@ -1,0 +1,12 @@
+How to Implenent Bootstrap in Django:
+========================
+
+
+->Bootstrap is a HTML & CSS & JavaScript based FrontEnd Framework.The main 
+objective of Bootstrap is to develop responsive web applications
+
+
+
+
+
+

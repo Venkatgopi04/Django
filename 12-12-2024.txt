@@ -1,0 +1,67 @@
+How to create an application in Django:
+=========================
+Python manage.py startapp application_name
+
+
+File and Folder structure for Django application:
+==============================
+
+S1--->application1--->migration_folder:
+===========================
+This folder contains the information about database operations
+
+
+S1--->application1---->__init__.py:
+=======================
+This file indicates that it is a Python and Django Package.__init__py file is empty.
+
+
+
+S1--->application1---->views.py:
+=======================
+This file is used to write the request and response business logic using following
+components
+                         ->Using Functional component
+                         ->Using Class component
+
+
+S1--->application1--->models.py:
+======================
+Model is a class.This file is used to create database tables(models) as per the 
+application reqn.
+
+S1---->application1---->tests.py:
+======================
+This file is used to perform unit testing operations as per the application reqn.
+
+
+S1--->application1---->apps.py:
+======================
+This file is used for to perform end to end testing as per the application reqn.
+
+
+S1--->application1---->admins.py:
+=======================
+This File is used  for to add new dependencies inside the admin app.
+
+
+
+application1--->views.py:
+=================
+from django.shortcuts import render
+from django.http import HttpResponse
+def Test_Case1(request):
+    return HttpResponse('<center><hr><h1><tt>This is functional component in Django</tt></h1><hr></center>')
+
+
+from django.shortcuts import render
+from django.http import HttpResponse
+def Test_Case1(request):
+    return HttpResponse('<center><hr><h1><tt>Service_One in Django</tt></h1><hr></center>')
+def Test_Case2(request):
+    return HttpResponse('<center><hr><h1><tt>Service_Two in Django</tt></h1><hr></center>')
+def Test_Case3(request):
+    return HttpResponse('<center><hr><h1><tt>Service_Three in Django</tt></h1><hr></center>')
+
+
+

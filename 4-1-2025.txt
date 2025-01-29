@@ -1,0 +1,18 @@
+Django_Rest_Framework:
+===============
+
+Prerequest to Django_Rest_Framework
+----------------------------------
+->Latest version of Django
+
+->We need to instal Django_Rest_Framework
+
+pip install djangorestframework
+
+Django_Rest_Framework:
+===============
+->Django_Rest_Framework is a Extension of Django Framework
+
+->The main objective of Django_Rest_Framework is to develop the Rest_ful_Api's
+or web services as per the application reqn
+

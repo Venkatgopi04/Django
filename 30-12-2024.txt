@@ -1,0 +1,83 @@
+Working on ORM queries in Django:
+======================
+Django supports ORM which stands for Object Relational Mapping.The main objective of 
+ORM is to perform database task as per the application reqn.
+
+
+ORM query to fetch all records:
+====================
+>>> from application1.models import Users
+>>> A1=Users.objects.all()
+>>> A1
+<QuerySet [<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>, <Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>]>
+>>>
+
+
+SQL query to fetch the all records:
+======================
+select * from Users;
+
+
+ORM query to fetch single record:
+=====================
+>>> A2=Users.objects.get(First_Name="Rahul")
+>>> A2
+<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>
+>>>
+
+
+SQL query to fetch single record:
+=====================
+select * from Users where First_Name="Rahul";
+
+
+
+ORM query to insert new record:
+=====================
+>>> A3=Users.objects.create(First_Name="Jessica",Last_Name="Adam",Username="jessica_12345",P1="JA_12345",P2="JA_12345",Mobile_Number="1234567890",Email="jessica@gmail.com")
+>>> A3
+<Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>
+>>> A4=Users.objects.all()
+>>> A4
+<QuerySet [<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>, <Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>, <Users: Priya Kumari priya_12345 PRIYA_22331 PRIYA_22331 7070123123 priya@gmail.com>, <Users: Sandeep Verma sandeep_77777 sandeep_77777 sandeep_77777 6306301234 sandeep@gmail.com>, <Users: Jessica Adam jessica_12345 JA_12345 JA_12345 1234567890 jessica@gmail.com>]>
+>>>
+
+
+SQL query to insert new record:
+====================
+insert into Users values("","","");
+
+
+views.py:
+=====
+from django.shortcuts import render
+from django.http import HttpResponse 
+from application1.models import Users 
+def Test_Case1(request):
+    data=Users.objects.create(First_Name="Nitin",Last_Name="Kumar",Username="nitin_12345",P1="nitin_12345",P2="nitin_12345",Mobile_Number="7676123123",Email="nitin@gmail.com")
+    data.save()
+    return HttpResponse("<h1><tt>Record is inserted successfully</tt></h1>")
+
+
+
+Working with filter in Django with ORM:
+=========================
+>>> A5=Users.objects.filter(First_Name__startswith="R")
+>>> A5
+<QuerySet [<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>]>
+>>>
+
+>>> A6=Users.objects.filter(First_Name__startswith="R")|Users.objects.filter(Last_Name__startswith="S")
+>>> A6
+<QuerySet [<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>, <Users: Atul Sharma atul_12345 AT_12345 AT_12345 8080123123 atul@gmail.com>]>
+>>>
+
+
+>>> A6=Users.objects.filter(First_Name__startswith="R")&Users.objects.filter(Last_Name__startswith="S")
+>>> A6
+<QuerySet [<Users: Rahul Sharma rahul_12345 RA_12345 RA_12345 9090123123 rahul@gmail.com>]>
+>>>
+
+
+
+

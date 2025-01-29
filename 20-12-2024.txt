@@ -1,0 +1,28 @@
+How to connect Django with Mysql_Database:
+============================
+
+->XAMPP --->Mysql_database
+
+Need to install a predefine module named as pymysql
+
+->pip install pymysql
+
+->Django_Project ----> settings.py
+---------------------------------
+import pymysql
+pymysql.install_as_MySQLdb()
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'my_database_61',
+        'USER':'root',
+        'PASSWORD':'',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
+    }
+}
+
+
+
+
+

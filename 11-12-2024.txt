@@ -1,0 +1,116 @@
+Django:
+======
+
+Prerequest to Learn Django:
+============================
+->FrontEnd Technologies
+      ->HTML & HTML5
+      ->CSS & CSS3
+      ->JavaScript
+      ->Bootstrap
+
+->Core & Advance Python
+
+
+Django:
+=====
+->Django is a backend web framework.The main objective of Django is to develop the
+complete end to end web applications.Where Django Developer(Full Stack Developer) is responsible for
+presentation logic & business logic & persistance logic(Database logic)
+
+presentation logic : Complete FrontEnd Development
+business logic : To write the business logic for request and response operations in web application development
+persistance logic : Database logic
+
+->Django uses it's owns web server (WSGI & AWSGI) which runs on 8000 port number.
+
+
+->Django uses it own database named as SQLITE3.As per application reqn we can 
+congiure other databases as well as per the application reqn.
+
+
+->Django uses a Design pattern named as MVT(Model View Template)
+
+MVT  ----> Model View Template
+
+Model --->Model is a class in Django.Meant for to create database tables as per the 
+applicaiton reqn.
+
+View ---->To write the business logic for request and response for web application development
+             using following ways
+                  
+                        ->Using Functional Component
+                        ->Using Class Component
+
+Template  --->FrontEnd Developement using HTML & HTML5
+
+
+->Django uses CLI approach.The main objective of CLI approach is to develop the 
+django web application in fastest way.
+
+->How to install Django:
+================
+In your O/S ---->Python 3.7.0
+
+pip install django==1.11.17
+
+To django version we use following command:
+=============================
+django-admin  --version
+
+
+How to create a Django Project:
+===================
+django-admin startproject  S1 
+
+
+File and Folder Structure of Django Project:
+============================
+
+S1--->s1 ---->__init__.py:
+=================
+This file indicates that it is a Python & Django Package.__init__.py file is empty file.
+
+
+S1---->s1---->settings.py:
+===================
+This file contains complete Django Project setting.
+
+
+S1---->s1---->urls.py:
+====================
+it contains urls.The use of this urls is for end_user access.
+
+
+
+S1---->s1--->wsgi.py:
+===================
+This file is used for Deployment purpose/Production purpose
+
+
+
+S1-->manage.py:
+===========
+           ->It is used to run the web server
+            ->It is used to create the applications inside the django Project
+
+
+
+How to run the web server:
+=========================
+Python mange.py runserver
+
+ How to change the port number:
+============================
+Python manage.py runserver 1234
+
+
+
+
+
+
+
+
+
+
+

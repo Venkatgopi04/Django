@@ -1,0 +1,26 @@
+Can we create urls.py file at application level:
+============================
+Yes we can create urls.py at application level.The main objective of creating urls.py 
+at application is provide the code reusability.
+
+
+
+How to Implement FrontEnd in Django:
+=======================
+
+Complete Structure of FrontEnd Development in Django
+
+Templates_Folder
+       application1_folder
+             HTML & HTML5
+
+Static_Folder
+           Images
+           CSS
+           JavaScript
+
+
+Working on templates:
+==============
+templates is meant for FrontEnd Development in Django.Using templates folder we 
+can represent the static content on web page

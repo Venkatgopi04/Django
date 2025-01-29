@@ -1,0 +1,477 @@
+Username ---->User_12345 --->[A-Z]{1}[a-z]*[_]{1}[0-9]{5}
+Password  ---->U_1234567 ---->[A-Z]{1}[_]{1}[0-9]{7}
+Confirm_Password ---->U_1234567 --->[A-Z]{1}[_]{1}[0-9]{7}
+
+
+Flask_Development---->main.py:
+=====================
+import time 
+from flask import Flask,render_template 
+app=Flask(__name__)
+@app.route("/home")
+def Test_Case1():
+    return render_template("home.html")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+
+Flask_Developments---->templates---->home.html:
+===================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Page</title>
+    <link  href="{{url_for('static',filename='Images/g2.png')}}" rel="icon" sizes="16*16">
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/index1.css')}}">
+    <script src="{{url_for('static',filename='JS/demo1.js')}}"></script>
+
+</head>
+<body>
+    <fieldset>
+        <legend>Application</legend>
+    
+            <hr>
+            <h1>Welcome to Ramanasoft_App_Store</h1>
+            <hr>
+            <br>
+            <br>
+            <hr>
+            <center>
+               <h2><tt>Welcome to User_Login</tt></h2>
+            </center>
+            <hr>
+            <br>
+            <hr>
+            <fieldset>
+                <legend>USER_LOGIN</legend>
+                <center>
+                    <table border="4">
+                        <form action="" onsubmit="return Test_Case1()" method="post">
+                        <tr>
+                            <td><label for="">Username</label></td>
+                            <td><input type="text" placeholder="username" id="A" autocomplete="off"></td>
+                            <td><span id="ABC"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Password</label></td>
+                            <td><input type="password" placeholder="Password" id="B" autocomplete="off"></td>
+                            <td><span id="XYZ"></span></td>
+                        </tr>
+                        <tr>
+                            <td><label for="">Confirm_Password</label></td>
+                            <td><input type="password" placeholder="Confirm Password" id="C" autocomplete="off"></td>
+                            <td><span id="abc"></span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="submit" value="LOGIN"></td>
+                        </tr>
+                        </form>
+                    </table>
+                </center>
+            </fieldset>
+            <hr>
+           
+            <br>
+            <hr>
+            <img src="{{url_for('static',filename='Images/r1.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r3.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r4.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">
+            <hr>
+            <br>
+            <hr>
+            <img src="{{url_for('static',filename='Images/r1.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r3.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r4.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">
+            <hr>
+            <br>
+            <hr>
+            <img src="{{url_for('static',filename='Images/r1.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r3.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r4.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">
+            <hr>
+            <br>
+            <hr>
+            <img src="{{url_for('static',filename='Images/r1.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r3.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r4.png')}}" alt="In_valid_path" height="150" width="150">&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="{{url_for('static',filename='Images/r2.png')}}" alt="In_valid_path" height="150" width="150">
+            <hr>
+        
+        
+
+        
+    </fieldset>
+   
+    
+</body>
+</html>
+
+
+Flask_Development---->static---->index1.css:
+==============================
+h1 
+{
+    width:100%;
+    height:45px;
+    background-color: crimson;
+    color:white;
+    text-align:center;
+    border-radius:15px;
+    border:3px solid black;
+    font-family:monospace;
+    font-size:24px;
+    text-transform:uppercase;
+    padding-top:15px;
+}
+span 
+{
+    background-color: crimson;
+    color:white;
+    font-family:monospace;
+    font-size:18px;
+    border-radius:15px;
+    border:2px solid black;
+}
+
+
+Flask_Development--->JS---->demo1.js:
+==========================
+
+function Test_Case1()
+{
+  var username=document.getElementById("A").value 
+  var P1=document.getElementById("B").value 
+  var P2=document.getElementById("C").value
+  var obj1=username.match(/[A-Z]{1}[a-z]*[_]{1}[0-9]{5}/g)
+  var obj2=P1.match(/[A-Z]{1}[_]{1}[0-9]{7}/g)
+  var obj3=P2.match(/[A-Z]{1}[_]{1}[0-9]{7}/g)
+  if(username==""||username==null)
+  {
+    window.alert("Username is requred")
+    document.getElementById("ABC").innerHTML="*** Username is required ***"
+    return false
+  }
+  else if(obj1==""||obj1==null)
+  {
+    window.alert("Username is In_valid")
+    document.getElementById("ABC").innerHTML=username+" "+"In_valid username Ex:User_12345"
+    return false
+  }
+  if(P1==""||P1==null)
+  {
+    window.alert("Password is required")
+    document.getElementById("XYZ").innerHTML="*** Password is required ***"
+    return false
+  }
+  else if(obj2==""||obj2==null)
+  {
+    window.alert("In_valid_Password")
+    document.getElementById("XYZ").innerHTML=P1+" "+"In_valid_Password Ex_U_1234567"
+    return false
+  }
+  if(P2==""||P2==null)
+    {
+      window.alert("Confirm_Password is required")
+      document.getElementById("abc").innerHTML="*** Confirm_Password is required ***"
+      return false
+    }
+    else if(obj3==""||obj3==null)
+    {
+      window.alert("In_valid_Password")
+      document.getElementById("abc").innerHTML=P2+" "+"In_valid_Password Ex_U_1234567"
+      return false
+    }
+
+
+
+}
+
+
+How to implement Bootstrap in Flask:
+=======================
+
+
+Flask_Development ---->main.py:
+=======================
+import time 
+from flask import Flask,render_template
+app=Flask(__name__)
+@app.route("/register")
+def Regsiter_Component():
+    return render_template("register.html")
+@app.route("/login")
+def Login_Component():
+    return render_template("login.html")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Flask_Development--->templates---->register.component:
+======================================
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>PAGE LAYOUTS</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="jumbotron">
+                    <h2 class="text-center text-white bg-dark">Register-Here</h2>
+                    <hr>
+                    <div class="form-group">
+                        <form action="" method="post">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" placeholder="First_Name" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" placeholder="Last_Name" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" placeholder="Username" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                <input type="password" placeholder="Password" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                <input type="password" placeholder="Confirm_Password" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+                                <input type="email" placeholder="Email_Address" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                <input type="tel" placeholder="Mobile_Number" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <input type="submit" value="REGISTER" class="btn btn-dark btn-lg">
+                            
+
+                        </form>
+                    </div>
+                    <hr>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+ 
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+Flask_Development---->templates---->login.html:
+=================================
+<!doctype html>
+<html lang="en">
+  <head>
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>PAGE LAYOUTS</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="jumbotron">
+                    <h2 class="text-center text-white bg-dark">Login-Here</h2>
+                    <hr>
+                    <div class="form-group">
+                        <form action="" method="post">
+                            
+                          
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input type="text" placeholder="Username" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                <input type="password" placeholder="Password" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-eye-close"></i></span>
+                                <input type="password" placeholder="Confirm_Password" class="form-control" autocomplete="off">
+                            </div>
+                            <br>
+                            <br>
+                           
+                            <br>
+                            <br>
+                            <input type="submit" value="LOGIN" class="btn btn-dark btn-lg">
+                            
+
+                        </form>
+                    </div>
+                    <hr>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+ 
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+->Flask_rest_ful:
+===========
+It is a extension of Flask.Flask_rest_ful is meant to develop rest_ful_api's.As per
+Github software Engineers(Python) widely used framework for API's development 
+
+
+How to install flask_rest_ful Framework:
+=========================
+pip install flask_restful
+
+
+Ex1:
+===
+import time 
+from flask import Flask 
+from flask_restful import Resource,Api 
+app=Flask(__name__)
+api=Api(app)
+class Test_Case1(Resource):
+    def get(self):
+        return {"Data":"Welcome to Flask for API Development"}
+api.add_resource(Test_Case1,"/T1")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Ex2:
+===
+import time 
+from flask import Flask 
+from flask_restful import Resource,Api 
+app=Flask(__name__)
+api=Api(app)
+class Test_Case1(Resource):
+    def get(self,name):
+        return {"Data":"Api_Framework name is:{}".format(name)}
+api.add_resource(Test_Case1,"/T1/<string:name>")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Ex3:
+==
+import time 
+from flask import Flask 
+from flask_restful import Resource,Api 
+app=Flask(__name__)
+api=Api(app)
+Product_Details={
+    1:{"Pid":1001,"Pname":"Mobile_1","Price":23000.0,"Company":"Samsung","M_date":"12/12/2024","Exp_date":"12/12/2025"},
+    2:{"Pid":1002,"Pname":"Mobile_2","Price":24000.0,"Company":"Samsung","M_date":"13/12/2024","Exp_date":"13/12/2025"},
+    3:{"Pid":1003,"Pname":"Mobile_3","Price":29000.0,"Company":"Samsung","M_date":"14/12/2024","Exp_date":"14/12/2025"},
+    4:{"Pid":1004,"Pname":"Mobile_4","Price":31000.0,"Company":"Samsung","M_date":"15/12/2024","Exp_date":"15/12/2025"},
+    5:{"Pid":1005,"Pname":"Mobile_5","Price":33000.0,"Company":"Samsung","M_date":"16/12/2024","Exp_date":"16/12/2025"}
+}
+class Test_Case1(Resource):
+    def get(self):
+        return Product_Details
+       
+api.add_resource(Test_Case1,"/T1")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+
+Ex4:
+===
+import time 
+from flask import Flask 
+from flask_restful import Resource,Api 
+app=Flask(__name__)
+api=Api(app)
+Product_Details={
+    1:{"Pid":1001,"Pname":"Mobile_1","Price":23000.0,"Company":"Samsung","M_date":"12/12/2024","Exp_date":"12/12/2025"},
+    2:{"Pid":1002,"Pname":"Mobile_2","Price":24000.0,"Company":"Samsung","M_date":"13/12/2024","Exp_date":"13/12/2025"},
+    3:{"Pid":1003,"Pname":"Mobile_3","Price":29000.0,"Company":"Samsung","M_date":"14/12/2024","Exp_date":"14/12/2025"},
+    4:{"Pid":1004,"Pname":"Mobile_4","Price":31000.0,"Company":"Samsung","M_date":"15/12/2024","Exp_date":"15/12/2025"},
+    5:{"Pid":1005,"Pname":"Mobile_5","Price":33000.0,"Company":"Samsung","M_date":"16/12/2024","Exp_date":"16/12/2025"}
+}
+class Test_Case1(Resource):
+    def get(self,id):
+        return Product_Details[id]
+       
+api.add_resource(Test_Case1,"/T1/<int:id>")
+if(__name__=="__main__"):
+    app.run(debug=True)
+
+    
+
+
+

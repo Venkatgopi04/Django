@@ -1,0 +1,20 @@
+->Working with Django_forms:
+==================
+
+
+->Model relationship:
+===============
+Django supports Model relationship.The main objective of Model relationship is to 
+create more than one model(table) as per the application reqn.To interconnect the 
+between models throughout application to maintain complete application.
+
+
+->One to One Relationship
+
+->One to Many Relationship or Many to One Relationship
+
+->Many to Many Relationship
+
+
+->One to One Relationship:
+=================

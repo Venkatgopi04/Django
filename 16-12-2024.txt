@@ -1,0 +1,13 @@
+Working on Static folder in Django:
+=====================
+Complete Structure of FrontEnd in Django
+templates
+       ->application1
+                HTML & HTML5
+static 
+    ->images
+    ->css
+    ->javascript
+
+
+static folder contains the images_folder,css_folder,javascript_folder

@@ -1,0 +1,83 @@
+Cookies in Django:
+============
+Cookies are small of piece of information created by django web server resides in client_machine.Once 
+cookies are set automatically client return the cookies.All cookeis in django in Dict form or key and 
+value form
+
+
+
+How to set the cookies:
+==============
+We can set the cookies using following methods
+
+set_cookie("key","value")
+
+
+How to get the cookies:
+==============
+We can get the cookies using following methods
+
+request.COOKIES.get("key","Default_Message")
+
+
+How to delete the cookies:
+================
+We can delete the cookies using following methods
+
+delete_cookie("name")
+
+
+Session in Django:
+============
+Django supports Session.In django session can be implemented using session framework.abstract
+sending and receiving session not contains data.session contains session_id.In Django session
+can be stored inside the dict data type or key and value form.
+
+
+Note:
+====
+In django session will store in Database.We need to perform one operations
+named as 
+
+python mange.py migrate
+
+
+In  real world application session can be implmented using following ways
+===============================================
+->Session can be implemented using Database
+->Session can be implemented using Cookies
+->Session can be implemented using File_Format
+->Session can be implemented using Cache_format
+
+
+How to set the session:
+===============
+We can set the session using as follows
+
+request.session['name']="Value"
+
+
+How to get the session:
+===============
+we can get the session using as follows
+
+request.session.get("name",default="Message")
+
+
+How to delete the session:
+================
+We can delete the session using del keyword followed session name
+
+
+del request.session['name']
+
+
+
+
+
+
+
+
+
+
+

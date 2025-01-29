@@ -1,0 +1,5 @@
+One to Manty or Many to One relationship:
+===========================
+
+Many to Many Relationship:
+=================
